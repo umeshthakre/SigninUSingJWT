@@ -35,9 +35,9 @@ app.use(passport.initialize());
 //config jwt strategy
 require("./Strategy/jwtStrategy")(passport);
 
-// app.get("/", (req, res) => res.send("this is jwt"));
+app.get("/", (req, res) => res.send("this is jwt"));
 
-app.use("/", login);
+app.use("/login", login);
 
 //create server
 app.listen(port, (req, res) => {
