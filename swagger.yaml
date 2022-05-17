@@ -1,0 +1,28 @@
+openapi: 3.0.0
+info:
+  title: User Login App
+  description: Signin Using JWT token
+  version: 1.0.1
+
+servers:
+  - url: http://localhost:3000/api
+    description: Main Page
+  - url: http://localhost:3000/login
+    description: This is auth
+
+components:
+  securitySchemes:
+  BasicAuth:
+    type: http
+    scheme: basic
+  BearerAuth:
+    type: http
+    scheme: bearer
+
+paths:
+  /users:
+    get:
+      summary: Returns a list of users.
+      description: Optional extended description in CommonMark or HTML.
+      responses:
+        "200": # status code
